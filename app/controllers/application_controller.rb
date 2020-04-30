@@ -9,10 +9,4 @@ class ApplicationController < ActionController::Base
     end
   end
   
-  def task_created_by_currentuser
-    if current_user.id != @task.user_id
-      redirect_to '/'
-    end
-  end
-  
 end
